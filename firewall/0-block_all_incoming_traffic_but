@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#install uncomplicated firewall - ufw
+sudo ufw status
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+
+#onfigure ufw so that it blocks all incoming traffic, except these
+ufw allow 22/tcp
+ufw allow 443/tcp
+ufw allow 80/tcp

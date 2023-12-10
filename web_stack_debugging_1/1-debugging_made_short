@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
-#making nginx respond to port 80
-rm /etc/nginx/sites-enabled/default
+#making nginx respond to port
 ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 sudo service nginx restart
 kill "$(pgrep 'nginx'|head -1)":
